@@ -46,24 +46,26 @@ const Hero = () => {
 
                     {/* Hero Content */}
                     <div className='flex-1 flex items-end justify-center'>
-                        <div className='container px-4 md:px-6 lg:px-8'>
-                            <div ref={heroContentRef} className=' flex flex-col lg: flex-row justify-between items-center'>
-                                <div>
+                        <div className='container px-4 md:px-6 lg:px-8 pb-12 lg:pb-24'>
+                            <div ref={heroContentRef} className='flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 lg:gap-0'>
+                                <div className='max-w-4xl'>
 
                                     {/* Title */}
-                                    <h2 className='text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-white mb-2 leading-tight drop-shadow-lg'>
+                                    <h1 className='font-serif text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-medium text-white mb-6 leading-[0.85] tracking-tighter drop-shadow-2xl opacity-95'>
                                         {contentData.hero.title}
-                                    </h2>
+                                    </h1>
 
                                     {/* Subtitle with italic emphasis */}
-                                    <h2 className='text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-white mb-8 md:mb-10 lg:mb-12 leading-tight drop-shadow-lg'>
-                                        <em className='font-serif italic'>{contentData.hero.subtitle}</em> {contentData.hero.subtitleContinue}
-                                    </h2>
+                                    <p className='font-sans text-xl md:text-3xl lg:text-4xl font-light text-white/90 mb-2 leading-tight drop-shadow-lg tracking-wide max-w-2xl'>
+                                        <span className='font-serif italic font-normal text-white'>{contentData.hero.subtitle}</span> {contentData.hero.subtitleContinue}
+                                    </p>
                                 </div>
 
                                 {/* CTA Button */}
-                                <button className='bg-[#454C2D] hover:bg-[#3a4025] text-white px-6 py-3 md:px-8 md:py-4 rounded font-semibold text-sm md:text-base uppercase tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0'>
-                                    book now                                </button>
+                                <button className='group relative px-10 py-5 bg-[#454C2D] text-white rounded-full font-sans font-semibold text-sm md:text-base uppercase tracking-widest transition-all duration-500 ease-out shadow-[0_0_20px_rgba(69,76,45,0.4)] hover:shadow-[0_0_30px_rgba(69,76,45,0.6)] hover:-translate-y-1 overflow-hidden border border-white/10'>
+                                    <span className="relative z-10 group-hover:text-white transition-colors duration-300">Book Now</span>
+                                    <div className="absolute inset-0 bg-[#3a4025] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]" />
+                                </button>
                             </div>
                         </div>
                     </div>
