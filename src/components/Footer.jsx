@@ -1,9 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import content from '../constants/content.json';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Footer = () => {
     const { footer } = content;
     const [email, setEmail] = useState('');
+    const footerRef = useRef(null);
+
+    useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".footer-item", {
+            scrollTrigger: {
+                trigger: footerRef.current,
+                start: "top 90%",
+                toggleActions: "play none none reverse"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power3.out"
+        });
+    }, { scope: footerRef });
 
     const handleSubscribe = (e) => {
         e.preventDefault();
@@ -45,12 +66,12 @@ const Footer = () => {
     };
 
     return (
-        <footer className="w-full bg-[#1c1c1c]">
+        <footer ref={footerRef} className="w-full bg-[#1c1c1c] overflow-hidden">
             {/* Main Footer Content */}
             <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
                     {/* Company Info */}
-                    <div className="lg:col-span-2">
+                    <div className="footer-item lg:col-span-2">
                         <h2 className="text-3xl md:text-4xl font-bold tracking-[0.2em] mb-3 text-white">
                             {footer.logo}
                         </h2>
@@ -104,7 +125,7 @@ const Footer = () => {
                     </div>
 
                     {/* Quick Links */}
-                    <div>
+                    <div className="footer-item">
                         <h3 className="text-lg font-semibold mb-4 text-white">Quick Links</h3>
                         <ul className="space-y-2">
                             {footer.quickLinks.map((link, index) => (
@@ -121,7 +142,7 @@ const Footer = () => {
                     </div>
 
                     {/* Support */}
-                    <div>
+                    <div className="footer-item">
                         <h3 className="text-lg font-semibold mb-4 text-white">Support</h3>
                         <ul className="space-y-2">
                             {footer.support.map((link, index) => (
@@ -138,7 +159,7 @@ const Footer = () => {
                     </div>
 
                     {/* Legal */}
-                    <div>
+                    <div className="footer-item">
                         <h3 className="text-lg font-semibold mb-4 text-white">Legal</h3>
                         <ul className="space-y-2">
                             {footer.legal.map((link, index) => (
@@ -156,7 +177,7 @@ const Footer = () => {
                 </div>
 
                 {/* Newsletter Section */}
-                <div className="mt-12 pt-8 border-t border-gray-700">
+                <div className="footer-item mt-12 pt-8 border-t border-gray-700">
                     <div className="max-w-2xl">
                         <h3 className="text-xl font-semibold mb-2 text-white">{footer.newsletter.title}</h3>
                         <p className="text-gray-300 text-sm mb-4">{footer.newsletter.description}</p>
@@ -181,7 +202,7 @@ const Footer = () => {
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-gray-800 bg-gray-800/50">
+            <div className="footer-item border-t border-gray-800 bg-gray-800/50">
                 <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-gray-400 text-sm text-center md:text-left">

@@ -1,12 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import content from '../constants/content.json';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Rooms = () => {
     const { rooms } = content;
     const [selectedRoom, setSelectedRoom] = useState(0);
     const [activeImage, setActiveImage] = useState(0);
+    const sectionRef = useRef(null);
+    const headerRef = useRef(null);
+    const contentRef = useRef(null);
 
     const currentRoom = rooms.roomTypes[selectedRoom];
+
+    useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Header Animation
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: headerRef.current,
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+
+        tl.from(".header-item", {
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+    }, { scope: sectionRef });
+
+    // Content Animation - Re-runs when selectedRoom changes
+    useGSAP(() => {
+        gsap.from(".content-item", {
+            scrollTrigger: {
+                trigger: contentRef.current,
+                start: "top 75%",
+                toggleActions: "play none none reverse"
+            },
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power3.out",
+            clearProps: "all"
+        });
+    }, { scope: sectionRef, dependencies: [selectedRoom] });
 
     // Icon components
     const AmenityIcon = ({ type }) => {
@@ -56,26 +100,26 @@ const Rooms = () => {
     };
 
     return (
-        <section id="rooms" className="w-full bg-gradient-to-b from-white to-gray-50 py-16 md:py-20 px-4 md:px-6 lg:px-12">
+        <section ref={sectionRef} id="rooms" className="w-full bg-gradient-to-b from-white to-gray-50 py-16 md:py-20 px-4 md:px-6 lg:px-12 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
-                <div className="text-center mb-12 md:mb-16">
-                    <div className="flex items-center justify-center gap-3 mb-4">
+                <div ref={headerRef} className="text-center mb-12 md:mb-16">
+                    <div className="header-item flex items-center justify-center gap-3 mb-4">
                         <div className="w-8 h-[1px] bg-gray-400"></div>
                         <span className="text-sm text-gray-600 font-light tracking-wide uppercase">Accommodations</span>
                         <div className="w-8 h-[1px] bg-gray-400"></div>
                     </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4">
+                    <h2 className="header-item text-3xl md:text-4xl lg:text-5xl font-serif mb-4">
                         Our <span className="italic font-light">Rooms</span>
                     </h2>
-                    <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
+                    <p className="header-item text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
                         {rooms.description}
                     </p>
                 </div>
 
                 {/* Room Type Selector - Mobile First */}
                 <div className="mb-8 md:mb-12">
-                    <div className="flex overflow-x-auto gap-3 pb-4 scrollbar-hide snap-x snap-mandatory">
+                    <div className="flex overflow-x-auto gap-3 pb-4 scrollbar-hide snap-x snap-mandatory justify-start md:justify-center">
                         {rooms.roomTypes.map((room, index) => (
                             <button
                                 key={room.id}
@@ -95,9 +139,9 @@ const Rooms = () => {
                 </div>
 
                 {/* Room Details - Mobile First Layout */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                <div ref={contentRef} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                     {/* Left: Images */}
-                    <div className="space-y-4">
+                    <div className="content-item space-y-4">
                         {/* Main Image */}
                         <div className="relative rounded-2xl overflow-hidden shadow-xl group aspect-[4/3]">
                             <img
@@ -138,7 +182,7 @@ const Rooms = () => {
                     </div>
 
                     {/* Right: Details */}
-                    <div className="space-y-6">
+                    <div className="content-item space-y-6">
                         {/* Room Info */}
                         <div>
                             <h3 className="text-2xl md:text-3xl font-serif text-gray-900 mb-3">

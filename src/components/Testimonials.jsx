@@ -1,11 +1,49 @@
 import React, { useRef, useState, useEffect } from 'react';
 import content from '../constants/content.json';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Testimonials = () => {
     const { testimonials } = content;
     const scrollContainerRef = useRef(null);
+    const sectionRef = useRef(null);
+    const headerRef = useRef(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(true);
+
+    useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Header and Nav Animation
+        gsap.from(headerRef.current.children, {
+            scrollTrigger: {
+                trigger: headerRef.current,
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+
+        // Testimonial Cards Animation
+        gsap.from(".testimonial-card", {
+            scrollTrigger: {
+                trigger: scrollContainerRef.current,
+                start: "top 75%",
+                toggleActions: "play none none reverse"
+            },
+            x: 100,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+
+    }, { scope: sectionRef });
 
     const checkScrollButtons = () => {
         if (scrollContainerRef.current) {
@@ -38,10 +76,10 @@ const Testimonials = () => {
     };
 
     return (
-        <section id="reviews" className="w-full bg-gradient-to-b from-white to-gray-50 py-20 px-6 md:px-12 lg:px-20">
+        <section ref={sectionRef} id="reviews" className="w-full bg-gradient-to-b from-white to-gray-50 py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 {/* Header with Navigation */}
-                <div className="flex items-center justify-between mb-12">
+                <div ref={headerRef} className="flex items-center justify-between mb-12">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif">
                         Our client <span className="italic font-light">says</span> about us!
                     </h2>
@@ -108,7 +146,7 @@ const Testimonials = () => {
                     {testimonials.reviews.map((review) => (
                         <div
                             key={review.id}
-                            className="flex-shrink-0 w-[340px] md:w-[380px] snap-start"
+                            className="testimonial-card flex-shrink-0 w-[340px] md:w-[380px] snap-start"
                         >
                             <div className="bg-gradient-to-br from-[#e8ebe3] to-[#d4dac8]/80 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
                                 {/* Header */}

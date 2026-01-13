@@ -98,7 +98,7 @@ const NavBar = () => {
                     left: 0;
                     width: 0;
                     height: 2px;
-                    background-color: #454C2D;
+                    background-color: #ffffff;
                     transition: width 0.4s ease-out;
                 }
 

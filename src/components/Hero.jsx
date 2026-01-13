@@ -29,13 +29,13 @@ const Hero = () => {
     }, [])
 
     return (
-        <section id='hero' className='h-[100vh] rounded p-2'>
-            <div className='relative h-full w-full overflow-hidden'>
+        <section id='hero' className='h-[100vh]  p-2'>
+            <div className='relative h-full w-full overflow-hidden rounded-lg'>
                 {/* Background Image */}
                 <img
                     ref={bgImageRef}
-                    className='absolute inset-0 h-full w-full rounded object-cover'
-                    src="./bg.png"
+                    className='absolute inset-0 h-full w-full rounded-lg object-cover'
+                    src="./bg.webp"
                     alt="Mountain landscape"
                 />
 
@@ -47,16 +47,16 @@ const Hero = () => {
                     {/* Hero Content */}
                     <div className='flex-1 flex items-end justify-center'>
                         <div className='container px-4 md:px-6 lg:px-8'>
-                            <div ref={heroContentRef} className=' flex flex-row justify-between items-center'>
+                            <div ref={heroContentRef} className=' flex flex-col lg: flex-row justify-between items-center'>
                                 <div>
 
                                     {/* Title */}
-                                    <h2 className='text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-white mb-2 leading-tight drop-shadow-lg'>
+                                    <h2 className='text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-white mb-2 leading-tight drop-shadow-lg'>
                                         {contentData.hero.title}
                                     </h2>
 
                                     {/* Subtitle with italic emphasis */}
-                                    <h2 className='text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-white mb-8 md:mb-10 lg:mb-12 leading-tight drop-shadow-lg'>
+                                    <h2 className='text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-normal text-white mb-8 md:mb-10 lg:mb-12 leading-tight drop-shadow-lg'>
                                         <em className='font-serif italic'>{contentData.hero.subtitle}</em> {contentData.hero.subtitleContinue}
                                     </h2>
                                 </div>
