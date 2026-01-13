@@ -1,0 +1,104 @@
+{
+    "header": {
+        "logo": "WILDSCOPE",
+        "navigation": [
+            {
+                "label": "Trip",
+                "link": "#trip"
+            },
+            {
+                "label": "ABOUT",
+                "link": "#about"
+            },
+            {
+                "label": "REVIEWS",
+                "link": "#reviews"
+            }
+        ],
+        "rightNav": [
+            {
+                "label": "CONTACT",
+                "link": "#contact"
+            },
+            {
+                "label": "FAQ",
+                "link": "#faq"
+            }
+        ]
+    },
+    "hero": {
+        "title": "Pack your bag for",
+        "subtitle": "unforgettable",
+        "subtitleContinue": "destination",
+        "ctaText": "View Upcoming Trip",
+        "backgroundImage": "hero-bg.jpg"
+    },
+    "about": {
+        "label": "about",
+        "title": "Key benefits of our trip",
+        "description": "We craft personalized travel experiences for adventurers, dreamers, and explorers. Whether you're seeking tropical escapes, cultural journeys, or thrilling adventures, we make your dream trips a reality."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Small Groups",
+            "description": "More personalized travel experience, allowing deeper connections with guides",
+            "image": "https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=800"
+        },
+        {
+            "id": 2,
+            "title": "Professional Guide",
+            "description": "The travel experience with expert knowledge, insightful storytelling, and local expertise.",
+            "image": "https://images.unsplash.com/photo-1591084728795-1149f32d9866?q=80&w=800"
+        },
+        {
+            "id": 3,
+            "title": "Adventure and Leisure",
+            "description": "Perfect blend of excitement and relaxation for memorable experiences",
+            "image": "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?q=80&w=800"
+        },
+        {
+            "id": 4,
+            "title": "Easy & comfy",
+            "description": "Stress-free planning and comfortable accommodations for a relaxing journey",
+            "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800"
+        }
+    ],
+    "footer": {
+        "logo": "WILDSCOPE",
+        "description": "Crafting unforgettable travel experiences for adventurers worldwide.",
+        "social": [
+            {
+                "platform": "Facebook",
+                "link": "#"
+            },
+            {
+                "platform": "Instagram",
+                "link": "#"
+            },
+            {
+                "platform": "Twitter",
+                "link": "#"
+            }
+        ],
+        "links": [
+            {
+                "label": "About Us",
+                "link": "#about"
+            },
+            {
+                "label": "Contact",
+                "link": "#contact"
+            },
+            {
+                "label": "Privacy Policy",
+                "link": "#privacy"
+            },
+            {
+                "label": "Terms of Service",
+                "link": "#terms"
+            }
+        ],
+        "copyright": "© 2026 Wildscope. All rights reserved."
+    }
+}
