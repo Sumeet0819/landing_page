@@ -29,7 +29,7 @@ const Hero = () => {
     }, [])
 
     return (
-        <section id='hero' className='h-[96vh] rounded p-2'>
+        <section id='hero' className='h-[100vh] rounded p-2'>
             <div className='relative h-full w-full overflow-hidden'>
                 {/* Background Image */}
                 <img
