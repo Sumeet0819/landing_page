@@ -1,6 +1,6 @@
 {
     "header": {
-        "logo": "WILDSCOPE",
+        "logo": "SHIVGIRI RESORT",
         "navigation": [
             {
                 "label": "Trip",
@@ -27,78 +27,440 @@
         ]
     },
     "hero": {
-        "title": "Pack your bag for",
-        "subtitle": "unforgettable",
+        "title": "Welcome to Shivgiri Resort",
+        "subtitle": "your unforgettable",
         "subtitleContinue": "destination",
         "ctaText": "View Upcoming Trip",
         "backgroundImage": "hero-bg.jpg"
     },
     "about": {
         "label": "about",
-        "title": "Key benefits of our trip",
-        "description": "We craft personalized travel experiences for adventurers, dreamers, and explorers. Whether you're seeking tropical escapes, cultural journeys, or thrilling adventures, we make your dream trips a reality."
+        "title": "Experience Shivgiri Resort",
+        "description": "Where nature plays the role of a guide to take you on a tour of happiness. Escape the ordinary with Shivgiri Resort where luxury meets excellence - live beautiful moments with your loved ones in the tranquil surroundings of Silvassa & Dudhani."
     },
     "benefits": [
         {
             "id": 1,
-            "title": "Small Groups",
-            "description": "More personalized travel experience, allowing deeper connections with guides",
-            "image": "https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=800"
+            "title": "Nature's Embrace",
+            "description": "Where nature plays the role of a guide to take you on a tour of happiness. In surrounding of nature, your trip will be adventurous, playful, and full of new beautiful events that are never experienced before.",
+            "type": "text",
+            "colSpan": "col-span-1",
+            "rowSpan": "row-span-1"
         },
         {
             "id": 2,
-            "title": "Professional Guide",
-            "description": "The travel experience with expert knowledge, insightful storytelling, and local expertise.",
-            "image": "https://images.unsplash.com/photo-1591084728795-1149f32d9866?q=80&w=800"
+            "title": "",
+            "description": "",
+            "type": "image",
+            "image": "https://shivgiriresort.com/images/gallery/g01.jpg",
+            "colSpan": "col-span-2",
+            "rowSpan": "row-span-2"
         },
         {
             "id": 3,
-            "title": "Adventure and Leisure",
-            "description": "Perfect blend of excitement and relaxation for memorable experiences",
-            "image": "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?q=80&w=800"
+            "title": "Lush Greenery",
+            "description": "Shivgiri stands on 5 acres of land with lush greenery where we present you space and luxury. Experience the perfect blend of nature and comfort in our expansive resort.",
+            "type": "text",
+            "colSpan": "col-span-1",
+            "rowSpan": "row-span-1"
         },
         {
             "id": 4,
-            "title": "Easy & comfy",
-            "description": "Stress-free planning and comfortable accommodations for a relaxing journey",
-            "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800"
+            "title": "",
+            "description": "",
+            "type": "image",
+            "image": "https://shivgiriresort.com/images/gallery/g021.jpg",
+            "colSpan": "col-span-1",
+            "rowSpan": "row-span-1"
+        },
+        {
+            "id": 5,
+            "title": "Premium Facilities",
+            "description": "Shivgiri serves you an extraordinary experience where within the premises you will avail all the high-class facilities in a proper manner. We believe in making your stay amazing, full of joy and happiness.",
+            "type": "text",
+            "colSpan": "col-span-1",
+            "rowSpan": "row-span-1"
+        },
+        {
+            "id": 6,
+            "title": "Excellence & Service",
+            "description": "Shivgiri Resort is committed towards great gesture and satisfaction, offering the best service for you to have a wonderful stay. We are willing to earn various achievements for our service and loyalty.",
+            "type": "text",
+            "colSpan": "col-span-1",
+            "rowSpan": "row-span-1"
+        },
+        {
+            "id": 7,
+            "title": "",
+            "description": "",
+            "type": "image",
+            "image": "https://shivgiriresort.com/images/gallery/g07.jpg",
+            "colSpan": "col-span-1",
+            "rowSpan": "row-span-1"
+        },
+        {
+            "id": 8,
+            "title": "",
+            "description": "",
+            "type": "image",
+            "image": "https://shivgiriresort.com/images/gallery/g04.jpg",
+            "colSpan": "col-span-1",
+            "rowSpan": "row-span-1"
+        },
+        {
+            "id": 9,
+            "title": "",
+            "description": "",
+            "type": "image",
+            "image": " https://shivgiriresort.com/images/gallery/05.jpg",
+            "colSpan": "col-span-1",
+            "rowSpan": "row-span-1"
         }
     ],
+    "rooms": {
+        "title": "Our Rooms",
+        "subtitle": "Choose your perfect stay",
+        "description": "Experience comfort and luxury in our thoughtfully designed rooms, each offering modern amenities and stunning views.",
+        "roomTypes": [
+            {
+                "id": 1,
+                "name": "Executive Family Room",
+                "capacity": "4-6 Guests",
+                "size": "450 sq ft",
+                "price": "₹5,999",
+                "priceUnit": "per night",
+                "description": "Experience ultimate comfort in our Executive Family Room, t Enjoy your private balcony with panoramic views while indulging in our exclusive facilities.",
+                "mainImage": "https://shivgiriresort.com/images/gallery/g01.jpg",
+                "gallery": [
+                    "https://shivgiriresort.com/images/gallery/g01.jpg",
+                    "https://shivgiriresort.com/images/gallery/g021.jpg",
+                    "https://shivgiriresort.com/images/gallery/g07.jpg",
+                    "https://shivgiriresort.com/images/gallery/g04.jpg"
+                ],
+                "amenities": [
+                    {
+                        "icon": "coffee",
+                        "name": "Tea Coffee Maker"
+                    },
+                    {
+                        "icon": "tv",
+                        "name": "40\" Smart LED TV"
+                    },
+                    {
+                        "icon": "intercom",
+                        "name": "Intercom"
+                    },
+                    {
+                        "icon": "no-smoking",
+                        "name": "Non Smoking Rooms"
+                    },
+                    {
+                        "icon": "ac",
+                        "name": "Centralized Air Condition"
+                    },
+                    {
+                        "icon": "water",
+                        "name": "24 Hour Hot Water"
+                    },
+                    {
+                        "icon": "doctor",
+                        "name": "Doctor On Call"
+                    },
+                    {
+                        "icon": "wifi",
+                        "name": "High-Speed Wi-Fi"
+                    }
+                ],
+                "features": [
+                    "Separate living area for family comfort",
+                    "King-size or queen-size beds (2 beds)",
+                    "Additional beds available for extra family members",
+                    "Premium toiletries and plush linens",
+                    "Flat-screen TV with enhanced technology",
+                    "Tea & coffee making facilities",
+                    "Private balcony with panoramic views",
+                    "Spacious en-suite bathroom",
+                    "Mini refrigerator",
+                    "Access to exclusive resort amenities"
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Deluxe Suite",
+                "capacity": "2-3 Guests",
+                "size": "350 sq ft",
+                "price": "₹4,499",
+                "priceUnit": "per night",
+                "mainImage": "https://shivgiriresort.com/images/gallery/g021.jpg",
+                "gallery": [
+                    "https://shivgiriresort.com/images/gallery/g021.jpg",
+                    "https://shivgiriresort.com/images/gallery/g01.jpg",
+                    "https://shivgiriresort.com/images/gallery/g04.jpg"
+                ],
+                "amenities": [
+                    {
+                        "icon": "coffee",
+                        "name": "Tea Coffee Maker"
+                    },
+                    {
+                        "icon": "tv",
+                        "name": "32\" Smart LED TV"
+                    },
+                    {
+                        "icon": "no-smoking",
+                        "name": "Non Smoking Rooms"
+                    },
+                    {
+                        "icon": "ac",
+                        "name": "Air Conditioning"
+                    },
+                    {
+                        "icon": "water",
+                        "name": "24 Hour Hot Water"
+                    },
+                    {
+                        "icon": "wifi",
+                        "name": "Free WiFi"
+                    }
+                ],
+                "features": [
+                    "Queen size bed",
+                    "Work desk",
+                    "Premium toiletries",
+                    "Room service"
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Premium Room",
+                "capacity": "2 Guests",
+                "size": "280 sq ft",
+                "price": "₹3,299",
+                "priceUnit": "per night",
+                "mainImage": "https://shivgiriresort.com/images/gallery/g07.jpg",
+                "gallery": [
+                    "https://shivgiriresort.com/images/gallery/g07.jpg",
+                    "https://shivgiriresort.com/images/gallery/g04.jpg"
+                ],
+                "amenities": [
+                    {
+                        "icon": "coffee",
+                        "name": "Tea Coffee Maker"
+                    },
+                    {
+                        "icon": "tv",
+                        "name": "LED TV"
+                    },
+                    {
+                        "icon": "ac",
+                        "name": "Air Conditioning"
+                    },
+                    {
+                        "icon": "water",
+                        "name": "Hot Water"
+                    },
+                    {
+                        "icon": "wifi",
+                        "name": "WiFi"
+                    }
+                ],
+                "features": [
+                    "Comfortable bedding",
+                    "Attached bathroom",
+                    "Daily housekeeping",
+                    "Complimentary breakfast"
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Standard Room",
+                "capacity": "2 Guests",
+                "size": "220 sq ft",
+                "price": "₹2,499",
+                "priceUnit": "per night",
+                "mainImage": "https://shivgiriresort.com/images/gallery/g04.jpg",
+                "gallery": [
+                    "https://shivgiriresort.com/images/gallery/g04.jpg",
+                    "https://shivgiriresort.com/images/gallery/g07.jpg"
+                ],
+                "amenities": [
+                    {
+                        "icon": "tv",
+                        "name": "LED TV"
+                    },
+                    {
+                        "icon": "ac",
+                        "name": "Air Conditioning"
+                    },
+                    {
+                        "icon": "water",
+                        "name": "Hot Water"
+                    },
+                    {
+                        "icon": "wifi",
+                        "name": "WiFi"
+                    }
+                ],
+                "features": [
+                    "Cozy atmosphere",
+                    "Clean & comfortable",
+                    "Essential amenities",
+                    "Great value"
+                ]
+            }
+        ]
+    },
+    "popularPlaces": {
+        "title": "Popular places in our trip!",
+        "places": [
+            {
+                "id": 1,
+                "name": "DUDHANI LAKE   ",
+                "location": "Dadra and Nagar Haveli , Dudhani",
+                "description": "Located around 20 kms from Khanvel Dudhani is a beautiful lake. It Has boating facility for tourist and recommended as must visit for all tourist visiting Silvassa ( Dadra and Nagar Haveli )",
+                "mainImage": "https://s7ap1.scene7.com/is/image/incredibleindia/dudhni-lake-silvassa-daman-&-diu-3-attr-hero?qlt=82&ts=1726737253846",
+                "thumbnails": [
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn_hDLDt9-CrOAaoDBmUz-xv19m8WUS-ctIA&s",
+                    "https://s7ap1.scene7.com/is/image/incredibleindia/dudhni-lake-silvassa-daman-&-diu-1-attr-hero?qlt=82&ts=1726737256250",
+                    "https://indiacinehub.gov.in/sites/default/files/styles/flexslider_full/public/2024-02/1543560842_dsc_1298-768x509.jpg?itok=aDf40pTV",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYKNtRcmn645W8-cbPE6uIkh-41XYab48WRQ&s"
+                ],
+                "counter": "01/24"
+            }
+        ]
+    },
+    "testimonials": {
+        "title": "Our client says about us!",
+        "reviews": [
+            {
+                "id": 1,
+                "name": "PAULO",
+                "location": "Tours to Santorini, Greco",
+                "image": "/santorini_sunset_group_1768293973644.png",
+                "review": "I visited Santorini last month, and it was truly magical. The views were amazing — those famous sunsets everyone raves about lived up to the hype. The white buildings against the deep blue sea created picture-perfect memories.",
+                "date": "17 June, 2025"
+            },
+            {
+                "id": 2,
+                "name": "ELIYA",
+                "location": "Camp in Switzerland",
+                "image": "/switzerland_mountain_hikers_1768293998661.png",
+                "review": "It was absolutely breathtaking. The Swiss Alps were even more stunning than I had imagined, with snow-capped peaks and crystal-clear lakes surrounded by wildflowers. The charming alpine villages felt like stepping into a postcard.",
+                "date": "19 May, 2025"
+            },
+            {
+                "id": 3,
+                "name": "MELOOM",
+                "location": "Camp in Switzerland",
+                "image": "/switzerland_family_photo_1768294057091.png",
+                "review": "It was an unforgettable experience. The landscapes were stunning, with lush valleys and sparkling lakes at every turn. Exploring quaint towns like Lucerne and Interlaken gave me a true sense of Swiss culture and hospitality.",
+                "date": "02 February, 2025"
+            },
+            {
+                "id": 4,
+                "name": "SUNIDHI",
+                "location": "Trip in Japan",
+                "image": "/japan_beach_group_1768294072907.png",
+                "review": "The perfect blend of tradition and modernity! I was amazed by everything I saw, from ancient temples and shrines to beautiful gardens in Kyoto to the vibrant, bustling streets of Tokyo, every moment was unique.",
+                "date": "25 November, 2024"
+            }
+        ]
+    },
     "footer": {
-        "logo": "WILDSCOPE",
-        "description": "Crafting unforgettable travel experiences for adventurers worldwide.",
+        "logo": "SHIVGIRI RESORT",
+        "tagline": "Where Nature Meets Luxury",
+        "description": "Nestled in the lush greenery of Silvassa & Dudhani, Shivgiri Resort offers a perfect blend of nature, comfort, and modern amenities. Experience tranquility on our 5-acre property with premium facilities and warm hospitality.",
+        "contact": {
+            "email": "info@shivgiriresort.com",
+            "phone": "+91 98765 43210",
+            "address": "Shivgiri Resort, Silvassa - Dudhani Road, Dadra and Nagar Haveli, India"
+        },
         "social": [
             {
                 "platform": "Facebook",
-                "link": "#"
+                "link": "https://facebook.com/shivgiriresort",
+                "icon": "facebook"
             },
             {
                 "platform": "Instagram",
-                "link": "#"
+                "link": "https://instagram.com/shivgiriresort",
+                "icon": "instagram"
             },
             {
                 "platform": "Twitter",
-                "link": "#"
+                "link": "https://twitter.com/shivgiriresort",
+                "icon": "twitter"
+            },
+            {
+                "platform": "LinkedIn",
+                "link": "https://linkedin.com/company/shivgiriresort",
+                "icon": "linkedin"
+            },
+            {
+                "platform": "YouTube",
+                "link": "https://youtube.com/@shivgiriresort",
+                "icon": "youtube"
             }
         ],
-        "links": [
+        "quickLinks": [
             {
-                "label": "About Us",
+                "label": "About Resort",
                 "link": "#about"
             },
             {
-                "label": "Contact",
-                "link": "#contact"
+                "label": "Our Rooms",
+                "link": "#rooms"
             },
+            {
+                "label": "Nearby Places",
+                "link": "#trip"
+            },
+            {
+                "label": "Guest Reviews",
+                "link": "#reviews"
+            }
+        ],
+        "support": [
+            {
+                "label": "Booking Inquiry",
+                "link": "#booking"
+            },
+            {
+                "label": "Resort Facilities",
+                "link": "#facilities"
+            },
+            {
+                "label": "Check-in Guide",
+                "link": "#checkin"
+            },
+            {
+                "label": "Contact Us",
+                "link": "#contact"
+            }
+        ],
+        "legal": [
             {
                 "label": "Privacy Policy",
                 "link": "#privacy"
             },
             {
-                "label": "Terms of Service",
+                "label": "Terms & Conditions",
                 "link": "#terms"
+            },
+            {
+                "label": "Cancellation Policy",
+                "link": "#cancellation"
+            },
+            {
+                "label": "Refund Policy",
+                "link": "#refund"
             }
         ],
-        "copyright": "© 2026 Wildscope. All rights reserved."
+        "newsletter": {
+            "title": "Stay Updated",
+            "description": "Subscribe to receive exclusive offers, resort updates, and special packages directly to your inbox.",
+            "placeholder": "Enter your email"
+        },
+        "copyright": "© 2026 Shivgiri Resort. All rights reserved."
     }
 }

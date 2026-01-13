@@ -1,15 +1,41 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
 import NavBar from './NavBar'
 import contentData from '../constants/content.json'
 
 const Hero = () => {
+    const bgImageRef = useRef(null)
+    const heroContentRef = useRef(null)
+
+    useEffect(() => {
+        // Create a timeline for coordinated animations
+        const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+
+        // Animate background image - scale from 1.2 to 1 for immersive zoom effect
+        tl.fromTo(
+            bgImageRef.current,
+            { scale: 1.2, opacity: 0 },
+            { scale: 1, opacity: 1, duration: 1.8, ease: 'power2.out' }
+        )
+
+        // Animate hero content from bottom with opacity
+        // Start slightly after navbar begins (0.3s delay to coordinate)
+        tl.fromTo(
+            heroContentRef.current,
+            { y: 100, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1.2, ease: 'power3.out' },
+            '-=1.5' // Start 1.5s before previous animation ends (overlapping for smooth flow)
+        )
+    }, [])
+
     return (
         <section id='hero' className='h-[96vh] rounded p-2'>
             <div className='relative h-full w-full overflow-hidden'>
                 {/* Background Image */}
                 <img
+                    ref={bgImageRef}
                     className='absolute inset-0 h-full w-full rounded object-cover'
-                    src="https://images.unsplash.com/photo-1569369926169-9ee7fb80adeb?q=80&w=2063&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="./bg.png"
                     alt="Mountain landscape"
                 />
 
@@ -21,7 +47,7 @@ const Hero = () => {
                     {/* Hero Content */}
                     <div className='flex-1 flex items-end justify-center'>
                         <div className='container px-4 md:px-6 lg:px-8'>
-                            <div className=' flex flex-row justify-between items-center'>
+                            <div ref={heroContentRef} className=' flex flex-row justify-between items-center'>
                                 <div>
 
                                     {/* Title */}
@@ -36,7 +62,7 @@ const Hero = () => {
                                 </div>
 
                                 {/* CTA Button */}
-                                <button className='bg-[#f4a261] hover:bg-[#e8924a] text-white px-6 py-3 md:px-8 md:py-4 rounded font-semibold text-sm md:text-base uppercase tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0'>
+                                <button className='bg-[#454C2D] hover:bg-[#3a4025] text-white px-6 py-3 md:px-8 md:py-4 rounded font-semibold text-sm md:text-base uppercase tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0'>
                                     book now                                </button>
                             </div>
                         </div>
