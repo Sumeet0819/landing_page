@@ -34,7 +34,7 @@ const Hero = () => {
                 {/* Background Image */}
                 <img
                     ref={bgImageRef}
-                    className='absolute inset-0 h-full w-full rounded-lg object-cover'
+                    className='absolute inset-0 h-full w-full rounded-lg object-[center_100%] object-cover '
                     src="./bg.webp"
                     alt="Mountain landscape"
                 />
@@ -45,9 +45,9 @@ const Hero = () => {
                     <NavBar />
 
                     {/* Hero Content */}
-                    <div className='flex-1 flex items-end justify-center'>
-                        <div className='container px-4 md:px-6 lg:px-8 pb-12 lg:pb-24'>
-                            <div ref={heroContentRef} className='flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 lg:gap-0'>
+                    <div className='flex-1 flex items-end justify-center '>
+                        <div className='container px-4 md:px-6 lg:px-8 pb-6 lg:pb-12 '>
+                            <div ref={heroContentRef} className='flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 lg:gap-0 '>
                                 <div className='max-w-4xl'>
 
                                     {/* Title */}
