@@ -74,14 +74,14 @@ const Benefits = () => {
                 </div>
 
                 {/* Benefits Grid */}
-                <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[280px]">
+                <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[minmax(280px,auto)]">
                     {benefits.map((benefit) => (
                         <div
                             key={benefit.id}
                             className={`${benefit.colSpan} ${benefit.rowSpan} grid-item rounded-2xl overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl group`}
                         >
                             {benefit.type === 'text' ? (
-                                <div className="h-full bg-gradient-to-br from-[#e8ebe3] to-[#d4dac8]/80 p-8 flex flex-col justify-between border border-[#454C2D]/20 backdrop-blur-sm">
+                                <div className="h-full bg-gradient-to-br from-[#e8ebe3] to-[#d4dac8]/80 p-6 md:p-8 flex flex-col justify-between border border-[#454C2D]/20 backdrop-blur-sm">
                                     <h3 className="text-2xl md:text-3xl font-serif text-gray-800 mb-4 group-hover:text-[#454C2D] transition-colors">
                                         {benefit.title}
                                     </h3>

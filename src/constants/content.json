@@ -53,8 +53,8 @@
             "description": "",
             "type": "image",
             "image": "https://shivgiriresort.com/images/gallery/g01.jpg",
-            "colSpan": "col-span-2",
-            "rowSpan": "row-span-2"
+            "colSpan": "col-span-1 md:col-span-2",
+            "rowSpan": "row-span-1 md:row-span-2"
         },
         {
             "id": 3,
